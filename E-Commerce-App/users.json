@@ -1,0 +1,52 @@
+[
+  {
+    "email": "test@test.com",
+    "password": "password",
+    "id": "08e545f5"
+  },
+  {
+    "email": "luca@senzproduction.com",
+    "password": "123",
+    "id": "b8ea61e2"
+  },
+  {
+    "email": "test3@test.com",
+    "password": "123",
+    "id": "5d1eba7c"
+  },
+  {
+    "email": "testbuf@test.com",
+    "password": "2f44c2772648d2197f38fc59a8fc0ce780b6a5e1c5c7cd18da01454779ae7ab099a6119de3380e6bd08261950b1d20731f4c454e82d149541d3e2cca09b0c7a7.dfae23ae3e73faed",
+    "id": "de686a6e"
+  },
+  {
+    "email": "test10@test.com",
+    "password": "f713b88cb6805dd5f25c25ce3a2d51b41f3efc445d686fd9176f489c642c4aab4fbc11b330f8391c7a20423277334d43cd85c01c3aaed8a681db98b53b2e6d24.2823a220e1219e82",
+    "id": "d268f106"
+  },
+  {
+    "email": "sign@up.com",
+    "password": "c28232cc1be4f1c643f24a6bfc2d091874551c1fdfc06fe1f457ab95f04929d849d64648667fd8217cd9898318bec5749173cd3e38d530a81b7648ecf0722acb.8c81e41e11daee73",
+    "id": "319b6d30"
+  },
+  {
+    "email": "samstag@neu.com",
+    "password": "38578542b848c8d0505c4f531f79792c75e6f0ae166b829eb86ffa67f3ed2ceb0a8244e2781453e137794773cb226ddf6eef38ab51d07cdac603aa45d05c3b78.aa69ca6e2fb77173",
+    "id": "e447dcf2"
+  },
+  {
+    "email": "sonntag@sonntag.com",
+    "password": "5fd1114bd7c92c34005364bf6db4e269b5b82d7b1fc07b8fb4c79970f501469cab5e0e7a57b1c7a71065df224fc6892f3e23242a40dee6e8ad617c1f8b0b28d0.9d359fb7347dcfd8",
+    "id": "84ce2633"
+  },
+  {
+    "email": "montag@montag.com",
+    "password": "7b813c94730083134ed866e0d71414c215e47a15fdb0bc441b334e50ef363dd225e90b5ec06773081a3a790d036bc5ff20c93dd3e6794dd02357b53fbc2c447d.9359eaa4404e2a48",
+    "id": "6309c1e8"
+  },
+  {
+    "email": "euro@euro.com",
+    "password": "1a724fe3ffa35bbd5832e387a3c04825864f78caf81233489ce4d180e75a5ea2e79c00e1f69b4eed93c0c5f5444f5c87ba158a9b827b2b0bb84500d369f2e779.924814119475ee0e",
+    "id": "e0938d54"
+  }
+]

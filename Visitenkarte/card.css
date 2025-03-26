@@ -1,0 +1,13 @@
+#card{
+ border:solid 1px green;
+
+ max-width: 75%;
+ text-align: center;
+
+}
+
+#fullName{
+ font-weight: bold;
+  padding: 2rem 1rem;
+}
+

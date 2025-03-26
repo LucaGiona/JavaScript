@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="shortcut icon" href="#" type="image/x-icon">
+ <link rel="stylesheet" href="style.css">
+ <title>Kontaktformular</title>
+</head>
+<body>
+ <div class="container">
+  <h1>Kontaktformular</h1>
+  <form id="contactForm" >
+    <label for="name">Name</label>
+    <input type="text" id="name" placeholder="Max Mustermann" required />
+    <div class="error-message" id="nameError"></div>
+    <label for="email">E-Mail</label>
+    <input type="email" name="" id="email" placeholder="manu@internet.com" required>
+    <div class="error-message" id="emailError"></div>
+    <label for="message">Nachricht</label>
+    <textarea name="" id="message"  rows="6" placeholder="Bitte Nachricht eingeben..." required></textarea>
+    <div class="error-message" id="messageError"></div>
+    <div class="button-group">
+     <button type="button" id="clearButton" onclick="resetForm()">Löschen</button>
+     <button id="submitButton" type="submit">Absenden</button>
+    </div>
+  </form>
+
+
+ </div>
+
+ <script src="main.js"></script>
+</body>
+</html>

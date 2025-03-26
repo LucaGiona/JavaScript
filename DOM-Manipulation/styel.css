@@ -1,0 +1,18 @@
+  body{
+   background: rgb(244, 244, 162);
+  }
+        .black{
+            background-color: #000;
+            color:#fff;
+            width: 100px;
+            margin: 100px auto;
+            padding:100px;
+        }
+        .red{
+            background-color: #f00;
+            color:#0f0;
+            width: 100px;
+            margin: 100px auto;
+            padding:100px;
+        }
+    

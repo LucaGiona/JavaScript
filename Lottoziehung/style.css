@@ -1,0 +1,55 @@
+body{
+ background-color: black;
+ color: white;
+
+}
+
+#lotto-tiles-container{
+display: flex;
+justify-content: center;
+margin-top: 20px;
+
+
+}
+
+.lotto-tile{
+
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ width: 50px;
+ height: 50px;
+ border: #91df52 2px solid;
+ border-radius: 50%;
+ margin-right: 10px;
+ font-size: 24px;
+ font-weight: bold;
+ background-color: #3f6e19;
+ 
+}
+
+.center{
+
+ text-align: center;
+}
+
+#start-button{
+ display: block;
+ margin: 30px auto;
+ padding: 10px 30px;
+ border:  2px solid #91df52;
+ background-color:orange;
+ color: #3f6e19;
+ font-size: 19px;
+ font-weight: bold;
+ letter-spacing: 2px;
+ border-radius: 15px;
+ text-transform: uppercase;
+ cursor: pointer;
+}
+
+#start-button:hover{
+ background-color: #3f6e19;
+ color: orange;
+
+}

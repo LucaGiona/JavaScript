@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Custom Element: sidebar-l</title>
+    <style>
+        :root {
+            --s1: 1rem;
+        }
+
+        body {
+            font-family: sans-serif;
+            margin: 2rem;
+        }
+
+        nav {
+            background: #e0e0e0;
+            padding: 1rem;
+        }
+
+        main {
+            background: #f5f5f5;
+            padding: 1rem;
+        }
+
+        sidebar-l {
+            display: flex;
+            flex-wrap: wrap;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>&lt;sidebar-l&gt; Demo</h1>
+
+    <sidebar-l side="left" sideWidth="250px" contentMin="60%" space="1rem">
+        <nav>
+            <h2>Sidebar</h2>
+            <p>Navigation, Infos oder ähnliches.</p>
+        </nav>
+        <main>
+            <h2>Inhalt</h2>
+            <p>Dies ist der Hauptinhalt. Er nimmt den restlichen Platz ein.</p>
+            <p>Ziehe das Browserfenster kleiner, um das responsives Verhalten zu sehen!</p>
+        </main>
+    </sidebar-l>
+
+    <script type="module">
+        class Sidebar extends HTMLElement {
+            constructor() {
+                super();
+                this.render = () => {
+                    if (!this.contentMin.includes('%')) {
+                        console.warn('The value for each <sidebar-l> `contentMin` property should be a percentage.');
+                    }
+                    this.i = `Sidebar-${[this.side, this.sideWidth, this.contentMin, this.space].join('')}`;
+                    this.dataset.i = this.i;
+                    if (!document.getElementById(this.i)) {
+                        let styleEl = document.createElement('style');
+                        styleEl.id = this.i;
+                        styleEl.innerHTML = `
+              [data-i="${this.i}"] {
+                gap: ${this.space};
+                ${this.noStretch ? 'align-items: flex-start;' : ''}
+              }
+
+              [data-i="${this.i}"] > * {
+                ${this.sideWidth ? `flex-basis: ${this.sideWidth};` : ''}
+              }
+
+              [data-i="${this.i}"] > ${this.side !== 'left' ? ':first-child' : ':last-child'} {
+                flex-basis: 0;
+                flex-grow: 999;
+                min-inline-size: ${this.contentMin};
+              }
+            `.replace(/\s\s+/g, ' ').trim();
+                        document.head.appendChild(styleEl);
+                    }
+                }
+            }
+
+            get side() {
+                return this.getAttribute('side') || 'left';
+            }
+            set side(val) {
+                return this.setAttribute('side', val);
+            }
+
+            get sideWidth() {
+                return this.getAttribute('sideWidth') || null;
+            }
+            set sideWidth(val) {
+                return this.setAttribute('sideWidth', val);
+            }
+
+            get contentMin() {
+                return this.getAttribute('contentMin') || '50%';
+            }
+            set contentMin(val) {
+                return this.setAttribute('contentMin', val);
+            }
+
+            get space() {
+                return this.getAttribute('space') || 'var(--s1)';
+            }
+            set space(val) {
+                return this.setAttribute('space', val);
+            }
+
+            get noStretch() {
+                return this.hasAttribute('noStretch');
+            }
+            set noStretch(val) {
+                if (val) {
+                    this.setAttribute('noStretch', '');
+                } else {
+                    this.removeAttribute('noStretch');
+                }
+            }
+
+            static get observedAttributes() {
+                return ['side', 'sideWidth', 'contentMin', 'space', 'noStretch'];
+            }
+
+            connectedCallback() {
+                this.render();
+            }
+
+            attributeChangedCallback() {
+                this.render();
+            }
+        }
+
+        if ('customElements' in window) {
+            customElements.define('sidebar-l', Sidebar);
+        }
+    </script>
+
+</body>
+
+</html>

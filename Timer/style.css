@@ -1,0 +1,88 @@
+body{
+
+ background-color: black;
+ color:white;
+
+ font-family: Arial, Helvetica, sans-serif;
+}
+
+.container{
+
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+ height: 60vh;
+}
+
+.timer-container{
+ border: 1px solid pink;
+ width: 70%;
+ display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+
+ padding: 20px 40px;
+ margin-bottom: 20px;
+}
+
+.timer{
+ flex:1;
+ text-align: center;
+}
+
+.label {
+ font-size: 20px;
+ margin-bottom: 15px;
+
+}
+.time{
+ font-size: 48px;
+}
+
+.action-buttons{
+ display: flex;
+ justify-content: space-evenly;
+ margin-top: 10px;
+ width: 80%;
+}
+
+.set-buttons,
+.control-buttons{
+ display: flex;
+ justify-content: center;
+ gap: 15px;
+}
+
+.button{
+ width: 80px;
+ height: 40px;
+border-radius: 5px;
+ background-color: #4caf50;
+ color: white ;
+
+ font-size: 1.8rem;
+ line-height: 28px;
+ border: none ;
+ cursor: pointer;
+ box-shadow: none;
+}
+
+.button:hover{
+ background-color: white;
+ color:#4caf50;
+}
+
+#playPauseButton,
+#restartButton{
+ padding-bottom: 2px;
+}
+
+/* change in JS */
+.playing{
+ color:white;
+}
+.paused{
+ color:yellow;
+}

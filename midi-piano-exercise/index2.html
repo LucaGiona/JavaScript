@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+ <title>Tastendrücke protokollieren</title>
+</head>
+
+<body>
+ <script>
+  document.addEventListener("keydown", e => {
+   console.log("Down");
+   console.log(e);
+  });
+
+  document.addEventListener("keyup", e => {
+   console.log("Up");
+   console.log(e);
+  });
+ </script>
+</body>
+
+</html>

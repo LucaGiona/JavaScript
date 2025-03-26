@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="stylesheet" href="style.css">
+
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link
+  href="https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;700&family=Red+Hat+Mono:ital,wght@0,300..700;1,300..700&display=swap"
+  rel="stylesheet">
+
+<script  defer src="main.js"></script> 
+ <!-- /*Defer lädt die Seite zum Schluss*/ -->
+
+ <title>To_Do_List</title>
+</head>
+<body>
+  <h1 class="title">Stuff I need to do</h1>
+
+  <div class="all-tasks">
+   <h2 class="task-list-title">My Lists</h2>
+   <ul class="task-list" data-lists>
+    <!-- <li class="list-name active-list">You tube</li>
+    <li class="list-name">work</li>
+    <li class="list-name">Einkauf</li> -->
+   </ul>
+
+   <form action="" data-new-list-form>
+    <input 
+     type="text"
+     class="new list"
+     data-new-list-input
+     placeholder="new list name"
+     aria-label="new list name"
+     >
+
+     <button class="btn create"
+     aria-label="create new list button" >+</button>
+   </form>
+  </div>
+
+  <div class="todo-list" data-list-display-container>
+   <div class="todo-header">
+    <h2 class="list-title" data-list-title>You Tube</h2>
+    <p class="task-count" data-list-count>3 tasks remaining</p>
+   </div>
+   
+   <div class="todo-body">
+    <div class="tasks" data-tasks>
+     <div class="task">
+      <input 
+       type="checkbox"
+       id="task-1"
+       >
+       <label for="task-1">
+        <span class="custom-checkbox"></span>
+        record to do list video
+       </label>
+     </div>
+     <div class="task">
+      <input 
+       type="checkbox"
+       id="task-2"
+       >
+       <label for="task-2">
+        <span class="custom-checkbox"></span>
+        another task
+       </label>
+     </div>
+     <!-- /task 2 -->
+     <!-- copied to template -->
+     <!-- /task 3 -->
+    </div>
+    <div class="new-task-creator">
+      <form action="" data-new-task-form>
+       <input type="text" class="new task" placeholder="new task name" aria-label="new task name"
+       data-new-task-input>
+      
+       <button class="btn create" aria-label="create new task button">+</button>
+      </form>
+    </div>
+
+    <div class="delete-stuff">
+     <button class="btn delete">Clear completed task</button>
+     <button class="btn delete" data-delete-list-button>Delete list</button>
+    </div>
+   </div>
+
+  </div>
+
+
+ <!-- <script src="main.js"></script> -->
+<!-- remove all specific info --like text like id for input  like for atr in label  => generic template to be used in js -->
+<template id="task-template">
+  <div class="task">
+    <input type="checkbox">
+    <label >
+      <span class="custom-checkbox"></span>
+     
+    </label>
+  </div>
+</template>
+</body>
+</html>

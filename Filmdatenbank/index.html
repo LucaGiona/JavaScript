@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="stylesheet" href="style.css">
+ <link rel="shortcut icon" href="#" type="image/x-icon">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <title>Filmdatenbank</title>
+</head>
+<body>
+ <div class="conatiner">
+  <h1>Filmdatenbank</h1>
+  <button id="addFilmButton">Film hinzufügen</button>
+  <div id="addFilmLayout">
+   <div class="input-fields" id="inputFields">
+    <input type="text" name="" id="filmTitle" placeholder="Titel">
+    <input type="text" name="" id="filmGenre" placeholder="Genre"> 
+   </div>
+   <button id="confirmAddFilmButton">
+    <i class="fa fa-plus"></i>
+    <!-- icon von außerhalb -->
+   </button>
+  </div>
+  <div id="filmListLayout">  
+   <div id="searchLayout">
+    <input type="text" name="" id="searchInput" placeholder="Suche nach Titel oder Genre (oder Favoriten)...">
+    <button id="clearSearchButton" class="hidden">
+     <i id="clearSearchIcon" class="fa fa-close"></i>
+    </button>
+    <i id="searchIcon" class="fa fa-search "></i>
+   </div>
+   <ul id="filmList">
+
+   </ul>
+  </div>
+ </div>
+
+ <script src="main2.js"></script>
+</body>
+</html>

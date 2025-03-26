@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="stylesheet" href="/styel.css">
+ <title>DOM2_Test</title>
+</head>
+
+<body>
+ <h1>DOM 2</h1>
+ <input type="text" id="ausgabenID" name="ausgaben" value="" style="width: 1000px;">
+ <label for="ausgabenID">Ausgaben</label>
+ <br /><br />
+ <input type="button" value="get URL" onclick="getURL()">
+ <input type="button" value="get FileName" onclick="getFileName()">
+ <input type="button" value="get Domain" onclick="getDomain()">
+ <input type="button" value="get Image Info" onclick="getImageInfo()">
+ <input type="button" value="get Links" onclick="getLinks()">
+ <input type="range" min="1" max="100" value="50" id="myRange">
+ <br /><br />
+ <img src="../../../_images/site/arrow_up.png" id="arrowImgID" />
+ <br />
+ <img src="../../../_images/site/quitsche_entchen.jpg" id="entcheImgID">
+ <br /><br />
+ <a href="http://google.de">Google</a>
+ <br />
+ <a href="http://datenmark.de">Datenmark</a>
+ <br /><br />
+ <div class="top">
+  <input type="text" id="fname" name="fname" class="textBoxClass" value="">
+  <label for="fname">Vorname</label><br /><br />
+  <input type="text" id="lname" name="lname" class="textBoxClass" value="">
+  <label for="lname">Nachname</label>
+  <p>Name: <span id="output"></span></p>
+  <input type="button" value="Namen lesen)" onclick="getName()">
+ </div>
+ <br /><br />
+ <button id="checkboxId">Alle ankreuzen mit get ByName</button>
+ <button id="checkboxId2">Alle deaktivieren mit get ByName</button>
+ <br /><br />
+ <div>
+  <label> <input type="checkbox" id="KäseID" name="Lecker" value="Käse"> Käse </label>
+  <br />
+  <label><input type="checkbox" name="Lecker" value="Tomaten"> Tomaten </label>
+  <br />
+  <label><input type="checkbox" name="Lecker" value="Pilze"> Pilze </label>
+  <br />
+  <label><input type="checkbox" name="Lecker" value="Oliven"> Oliven </label>
+  <br />
+  <label><input type="checkbox" name="Lecker" value="Kuerbiskernbrot"> Kürbiskernbrot </label>
+  <br />
+  <label><input type="checkbox" name="Lecker" value="Fisch"> Fisch </label>
+ </div>
+ <br /><br />
+ <button id="getClassId">get ByClass</button>
+ <button id="attributeId">get the Attribute</button>
+ <br /><br />
+ <div class="divClass">xxx</div>
+ <div class="divClass">yyy</div>
+ <div class="divClass" id="divId" datenAttribut="ein div mit zzz als innerHTML" attr="noch ein Attribut"
+  grmpf="Hallo grmpf grmf">hier sind Attribute drinne</div>
+ <br /><br />
+ <button id="cmdImgId">Bild bewegen</button>
+ <br /><br />
+ <input type="button" class="buttonClass" value="Text- und HTML Elemente erzeugen" onclick="createText()">
+ <input type="button" class="buttonClass" value="neue Liste erstellen" onclick="newList()">
+ <input type="button" class="buttonClass" value="neues Bild einfügen" onclick="newImage()">
+ <input type="button" class="buttonClass" value="viele Bilder einfügen" onclick="createImg()">
+ <input type="button" value="Quitsche Entchen entfernen" onclick="remove('entcheImgID')">
+ <input type="button" value="Pfeil entfernen" onclick="remove('arrowImgID')">
+ <br /><br />
+ <div id="imageId"></div>
+ <div id="listDivId" class="divClass"></div>
+ <div id="newElementsID"></div>
+ <div id="targetID"></div>
+ <h1>set/remove CSS</h1>
+ <br /><br />
+ <input type="button" value="remove CSS" onclick="removeCSS()">
+ <input type="button" value="add CSS" onclick="addCSS()">
+ <input type="button" value="remove all CSS" onclick="removeAll()">
+ <input type="button" value="add style" onclick="addStyle()">
+ <br /><br />
+ <div id="divCSSID" class="black xxx yyy zzz">
+  Dies ist Text in einem div-tag.
+
+  <script src="/main.js"></script>
+</body>
+
+</html>

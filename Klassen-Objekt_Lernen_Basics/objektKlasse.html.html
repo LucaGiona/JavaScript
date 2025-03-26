@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Vorführungen</title>
+<!--    <script>-->
+<!--        'use strict'-->
+<!--        window.onload = function () {-->
+<!--            document.querySelector("#greet").onclick = function () {-->
+<!--                // Anweisung;-->
+<!--            }-->
+<!--        }-->
+<!--    </script>-->
+</head>
+<body>
+    <h1>Funktionen</h1>
+
+    <button onclick="ohneParameter()">Start</button>
+    <br/><br/>
+    <input type="text" name="numbers" value="" id="numbersId">
+    <label for="numbersId">Zahlen</label>
+    <br/><br/>
+    <button onclick="calculate()">Berechne</button>
+    <br/><br/>
+    <div class="response"></div>
+    <br/><br/>
+    <button id="greet">Sag Hallo</button>
+
+
+    <script>
+        // 'use strict' // auskommentiert, da sonst hier nicht alles funktionieren würde
+        function ohneParameter(){
+            console.log('Funktion ohne Parameter');
+        }
+
+        before();
+        function before() {
+            console.log('Bevor definiert');
+        }
+
+        function calculate(){
+            let val = document.querySelector('#numbersId');
+            console.log(val.value * val.value);
+            val.value = val.value * val.value;
+        }
+
+        function square(number){
+            console.log(number * number);
+        }
+        square(7);
+        square(3);
+        square(17);
+        square(23);
+
+        function name(first, last, age){
+            console.log(
+                'Vorname: ' + first
+                + ', Nachname: ' + last
+                + ', Alter: ' + age
+            );
+        }
+        name('Mark', 'Kostmann' , 63);
+
+        let change = 'no';
+        function changeFunci(val){
+            val = 'yes';
+        }
+        changeFunci(change);
+        console.log(change);
+
+        change = [111,222,333];
+        function changeFunci(val){
+            val[1] = 'yes';
+        }
+        changeFunci(change);
+        console.log(change);
+
+        function returnFunci(number){
+            return number * number;
+        }
+        console.log(returnFunci(2));
+        console.log(returnFunci(7));
+        console.log(returnFunci(9));
+
+        function mapping(funktion, array) {
+            let result = []; // neues Array
+            let i;
+            for (i = 0; i < array.length; i++) {
+                result[i] = funktion(array[i]);
+            }
+            return result;
+        }
+        function funci(x) {
+            return x * x * x;
+        }
+        let array = [2, 5, 10, 100];
+
+        console.log(mapping(funci,array));
+
+        function countDown(x) {
+            if (x < 5) return; // Abbruch Bedingung
+            console.log (x);
+            countDown (x-1);
+        }
+
+        countDown (10);
+
+        function quadriere(a) {
+            return a * a;
+        }
+        console.log(quadriere(3))
+
+        square = function(a){
+            return a * a;
+        }
+        console.log(square(7))
+
+        // Arrow Funktionen
+        let addiere = (a,b) => {
+            return a+b;
+        }
+        console.log (addiere(5,7));
+        console.log (addiere(3,6));
+
+
+        quadriere = a => {
+            return a*a;
+        }
+        console.log (quadriere(4));
+        console.log (quadriere(7));
+
+
+        quadriere = a => a*a;
+
+        console.log (quadriere(3));
+        console.log (quadriere(9));
+
+        let n = 123;
+        let s = 'Jojo Sand';
+
+
+        // Closures
+
+        let show = function(name) {   // äußere Funktion definiert die Variable "name"
+            var displayName = function() {
+                return name;  // displayName() == innere Funktion, es ist die 'Closure' innere Funktion hat Zugriff auf "name" Variable der äußeren Funktion
+            }
+            return displayName;  // gibt innere Funktion zurück
+        }
+        let myName = show('Mark Kostmann');
+        console.log(myName());
+
+        function addiere_2(x) {
+            return function(y) {
+                return x + y;
+            };
+        }
+
+        var add3 = addiere_2(3);
+        var add17 = addiere_2(17);
+
+        console.log(add3(9));  // 12
+        console.log(add17(4)); // 21
+
+
+    </script>
+</body>
+</html>
