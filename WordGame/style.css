@@ -1,0 +1,157 @@
+*{
+ box-sizing: border-box;
+}
+
+body {
+ font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+ color:#333;
+ margin: 0;
+ padding: 0;
+ 
+}
+
+.navbar{
+ border-bottom: 2px solid #333;
+ padding: 15px;
+ text-align: center;
+ margin-bottom: 0;
+}
+
+.brand{
+ font-size: 30px;
+}
+
+.scoreboard {
+  max-width: 295px;
+  width: 100%;;
+  margin: 10px auto;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  justify-items: center;
+  align-items: center;
+  row-gap: 10px;
+  column-gap: 5px;
+  
+
+}
+
+.scoreboard-letter {
+  height: 5rem;
+  width: 5rem;
+  font-size: 30px;
+  text-transform: uppercase;
+  border: solid 3px #ccc;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+.invalid {
+ animation: flash 1s;
+}
+
+@keyframes flash {
+ 5% {
+  border-color: crimson;
+ }
+
+ 100% {
+  border-color: #ccc;
+ }
+}
+
+.correct {
+ background-color: darkgreen;
+ color: white;
+}
+
+.close {
+ background-color: goldenrod;
+ color: white;
+}
+
+.wrong {
+ background-color: #cccccc;
+ color: white;
+}
+
+.spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1); /* Hintergrundrand */
+  border-left-color: #000; /* Farbe des sich drehenden Teils */
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: spin 1s linear infinite;
+  margin: 0 auto;
+  margin-top: 1em;
+  margin-bottom: 2em;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+ .hidden {
+  visibility: hidden;
+ }
+
+.info-bar {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+
+}
+
+@keyframes rainbow {
+  0%, 100% {
+    color: rgb(255, 0, 0); /* Rot */
+  }
+  8% {
+    color: rgb(255, 127, 0); /* Orange */
+  }
+  16% {
+    color: rgb(255, 255, 0); /* Gelb */
+  }
+  25% {
+    color: rgb(127, 255, 0); /* Hellgrün */
+  }
+  33% {
+    color: rgb(0, 255, 0); /* Grün */
+  }
+  41% {
+    color: rgb(0, 255, 127); /* Türkis */
+  }
+  50% {
+    color: rgb(0, 255, 255); /* Cyan */
+  }
+  58% {
+    color: rgb(0, 127, 255); /* Himmelblau */
+  }
+  66% {
+    color: rgb(0, 0, 255); /* Blau */
+  }
+  75% {
+    color: rgb(127, 0, 255); /* Violett */
+  }
+  83% {
+    color: rgb(255, 0, 255); /* Magenta */
+  }
+  91% {
+    color: rgb(255, 0, 127); /* Pink */
+  }
+}
+
+.winner {
+  animation: rainbow 5s infinite; /* 5 Sekunden Zyklus */
+  
+}
